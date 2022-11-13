@@ -54,7 +54,6 @@ func (controller *ordersController) Get(c *gin.Context) {
 
 	orderId, idErr := getOrderId(c.Param("order_id"))
 
-	print(orderId)
 	if idErr != nil {
 		c.JSON(idErr.Status(), idErr)
 		return
